@@ -3,6 +3,7 @@ import { React, useState, setState } from "react";
 import Inicial from "./components/inicial";
 import Exercicio from "./components/exercicio";
 import Jogo from "./components/jogo";
+import Quizz from "./components/quizz";
 
 
 function MyComponent({ value, doSomething }) {
@@ -28,6 +29,7 @@ export default function Home() {
       {currentPage === 'Inicial' && <Inicial setCurrentPage={setCurrentPage} currentState={currentState} setCurrentState={setCurrentState} />}
       {currentPage === 'Exercicio' && <Exercicio setCurrentPage={setCurrentPage} currentState={currentState} setCurrentState={setCurrentState} />}
       {currentPage === 'Jogo' && <Jogo setCurrentPage={setCurrentPage} currentState={currentState} setCurrentState={setCurrentState} />}
+      {currentPage === 'Quizz' && <Quizz setCurrentPage={setCurrentPage} currentState={currentState} setCurrentState={setCurrentState} />}
     </div>
   );
 }

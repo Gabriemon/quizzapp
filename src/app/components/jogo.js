@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
+import Quizz from './quizz';
 
 const getRandomNumber = () => Math.floor(Math.random() * 5) + 1;
 
-export default function Home() {
+export default function Home({ setCurrentPage, currentState, setCurrentState }) {
   const [currentNumber, setCurrentNumber] = useState(getRandomNumber());
   const [userInput, setUserInput] = useState('');
   const [attempts, setAttempts] = useState(0);
@@ -17,6 +18,12 @@ export default function Home() {
     setCorrectAnswers(0);
     setResult('');
     setFinalResult('');
+  };
+
+  const Quizz = () => {
+    const newState = [...currentState];
+    setCurrentState(newState);
+    setCurrentPage('Quizz');
   };
 
   const handleCheck = () => {
@@ -70,6 +77,14 @@ export default function Home() {
       <p className="mt-4 text-black">Tentativa {attempts} de 5</p> {/* Mostrar número da tentativa */}
       {result && <div className="mt-4 text-lg text-black">{result}</div>}
       {finalResult && <div className="mt-4 text-lg font-bold text-black">{finalResult}</div>}
+    
+      <button 
+        onClick={Quizz} 
+        className={`py-2 px-4 rounded mt-8 ${attempts < 5 ? 'bg-white text-gray-500' : 'bg-green-500 text-white'}`} 
+        disabled={attempts < 5} // Desabilitar até o final das 5 tentativas
+      >
+        Continuar
+      </button>
     </div>
   );
 }

@@ -4,6 +4,10 @@ import React, { useState } from "react"
 
 export default function Inicial({ setCurrentPage, currentState, setCurrentState }) {
 
+    const [name, setName] = useState("");
+
+    const nome = currentState.length > 0 ? currentState[0].name : "Explorador";
+
     const Game = () => {
         const newState = [...currentState,]
         setCurrentState(newState)
@@ -14,7 +18,7 @@ export default function Inicial({ setCurrentPage, currentState, setCurrentState 
         <>
             <div className="flex items-center justify-center h-screen">
                 <div className="size-4/6 bg-customgreen border border-gray-200 rounded-lg shadow dark:border-gray-700">
-                    <h1 className=" flex justify-center p-4 text-black text-lg font-bold">Olá Seja bem vindo ao Quiz de Desafios de Matemática para Crianças de 5 a 7 Anos!</h1>
+                    <h1 className=" flex justify-center p-4 text-black text-lg font-bold">Olá {name}Seja bem vindo ao Quiz de Desafios de Matemática para Crianças de 5 a 7 Anos!</h1>
                     <p className=" flex justify-center p-4 text-black text-lg font-bold">Olá, pequeno explorador! 🎉 Você está prestes a embarcar em uma aventura incrível no mundo da
                         matemática! Neste quiz divertido, você encontrará muitos desafios legais que vão fazer você pensar, contar e, principalmente, se divertir!</p>
                     <p className="flex justify-center p-4 text-black text-lg font-bold">
