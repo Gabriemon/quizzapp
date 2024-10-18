@@ -51,7 +51,9 @@ export default function Home({ setCurrentPage, currentState, setCurrentState }) 
   }, []);
 
   return (
+
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+    <div className="w-full max-w-4xl bg-customgreen border border-gray-200 rounded-lg shadow-lg p-6 md:p-10 dark:border-gray-700">
       <h1 className="text-2xl font-bold mb-6 text-black">Jogo de Correspondência!</h1>
       <p className="mb-4 text-black">Quantas estrelas você está vendo?</p>
       <div className="flex mb-4">
@@ -85,6 +87,7 @@ export default function Home({ setCurrentPage, currentState, setCurrentState }) 
       >
         Continuar
       </button>
+    </div>
     </div>
   );
 }
