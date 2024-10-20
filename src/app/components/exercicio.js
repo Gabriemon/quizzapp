@@ -13,6 +13,10 @@ export default function Inicial({ setCurrentPage, currentState, setCurrentState 
         setCurrentPage('Jogo')
     }
 
+    const Sair = () => {
+        setCurrentPage('Inicial');
+    }
+
     return (
         <>
             <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
@@ -32,6 +36,11 @@ export default function Inicial({ setCurrentPage, currentState, setCurrentState 
                         <button onClick={Game} className="bg-custompink font-bold py-4 px-8 rounded text-black text-lg md:text-xl lg:text-2xl hover:bg-pink-400 transition duration-300">Vamos começar!</button>
                     </div>
                 </div>
+            </div>
+            <div className="absolute bottom-4 right-4">
+                <button onClick={Sair} className="bg-custompink text-white font-bold py-2 px-4 rounded-lg text-lg hover:bg-custompink transition duration-300">
+                    Sair
+                </button>
             </div>
         </>
     )

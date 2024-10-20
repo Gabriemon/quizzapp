@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Quizz from './quizz';
 
+
 const getRandomNumber = () => Math.floor(Math.random() * 5) + 1;
 
 export default function Home({ setCurrentPage, currentState, setCurrentState }) {
@@ -25,6 +26,10 @@ export default function Home({ setCurrentPage, currentState, setCurrentState }) 
     setCurrentState(newState);
     setCurrentPage('Quizz');
   };
+
+  const Sair = () => {
+    setCurrentPage('Inicial');
+  }
 
   const handleCheck = () => {
     if (parseInt(userInput) === currentNumber) {
@@ -52,11 +57,11 @@ export default function Home({ setCurrentPage, currentState, setCurrentState }) 
 
   return (
 
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-    <div className="w-full max-w-4xl bg-customgreen border border-gray-200 rounded-lg shadow-lg p-6 md:p-10 dark:border-gray-700">
+    <div className="flex items-center justify-center text-center h-screen bg-gray-100">
+    <div className="flex flex-col max-w-4xl bg-customgreen border border-gray-200 rounded-lg shadow-lg p-6 md:p-10 dark:border-gray-700">
       <h1 className="text-2xl font-bold mb-6 text-black">Jogo de Correspondência!</h1>
       <p className="mb-4 text-black">Quantas estrelas você está vendo?</p>
-      <div className="flex mb-4">
+      <div className="flex justify-center mb-4">
         {Array.from({ length: currentNumber }, (_, index) => (
           <div key={index} className="w-10 h-10 bg-yellow-300 mx-1 clip-path-star"></div>
         ))}
@@ -71,7 +76,7 @@ export default function Home({ setCurrentPage, currentState, setCurrentState }) 
       />
       <button
         onClick={handleCheck}
-        className="bg-blue-500 text-white py-2 px-4 rounded"
+        className="bg-blue-500 text-white py-2 flex-col px-4 rounded"
         disabled={attempts >= 5} // Desabilitar o botão após 5 tentativas
       >
         Verificar
@@ -88,6 +93,12 @@ export default function Home({ setCurrentPage, currentState, setCurrentState }) 
         Continuar
       </button>
     </div>
+    <div className="absolute bottom-4 right-4">
+      <button onClick={Sair} className="bg-custompink text-white font-bold py-2 px-4 rounded-lg text-lg hover:bg-custompink transition duration-300">
+           Sair
+      </button>
     </div>
+    </div>
+    
   );
 }

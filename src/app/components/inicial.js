@@ -7,16 +7,15 @@ export default function Inicial({ setCurrentPage, currentState, setCurrentState 
         setName(event.target.value);
     };
 
-    const handleAgeClick = () => {
-        const newState = [...currentState, { name }]; // Adiciona o nome ao estado atual
+    const handleAgeClick = (ageGroup) => {
+        const newState = [...currentState, { name, ageGroup }]; // Adiciona o nome e a faixa etária ao estado atual
         setCurrentState(newState);
-        setCurrentPage('Exercicio');
+        setCurrentPage(ageGroup); // Define a página com base no grupo etário
     };
 
     return (
         <>
             <div className="flex items-center justify-center h-screen p-4">
-                {/* Aqui ajustamos a largura e mantemos o formato retangular com padding ajustável */}
                 <div className="w-full max-w-4xl bg-customgreen border border-gray-200 rounded-lg shadow-lg p-6 md:p-10 dark:border-gray-700">
                     <h1 className="flex justify-center p-6 text-black text-lg md:text-xl font-bold">Quem somos?</h1>
                     <p className="text-black text-base md:text-lg p-4 text-center">
@@ -36,13 +35,13 @@ export default function Inicial({ setCurrentPage, currentState, setCurrentState 
                     
                     {/* Ajuste responsivo nos botões */}
                     <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8 p-4">
-                        <button onClick={handleAgeClick} className="bg-customyellow font-bold py-4 px-6 rounded text-black text-lg md:text-2xl w-full md:w-auto">
+                        <button onClick={() => handleAgeClick('Exercicio')} className="bg-customyellow font-bold py-4 px-6 rounded text-black text-lg md:text-2xl w-full md:w-auto">
                             5 - 7
                         </button>
-                        <button onClick={handleAgeClick} className="bg-customsalmon font-bold py-4 px-6 rounded text-black text-lg md:text-2xl w-full md:w-auto">
+                        <button onClick={() => handleAgeClick('QuizzOito')} className="bg-customsalmon font-bold py-4 px-6 rounded text-black text-lg md:text-2xl w-full md:w-auto">
                             8 - 10
                         </button>
-                        <button onClick={handleAgeClick} className="bg-custompink font-bold py-4 px-6 rounded text-black text-lg md:text-2xl w-full md:w-auto">
+                        <button onClick={() => handleAgeClick('QuizzOnze')} className="bg-custompink font-bold py-4 px-6 rounded text-black text-lg md:text-2xl w-full md:w-auto">
                             11 - 13
                         </button>
                     </div>
