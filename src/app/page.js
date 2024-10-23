@@ -7,6 +7,7 @@ import Quizz from "./components/quizz";
 import QuizzCinco from "./components/quizzcinco";
 import QuizzOito from "./components/quizzoito";
 import QuizzOnze from "./components/quizzonze";
+import GameOito from "./components/gameoito";
 
 
 function MyComponent({ value, doSomething }) {
@@ -36,6 +37,8 @@ export default function Home() {
       {currentPage === 'QuizzCinco' && <QuizzCinco setCurrentPage={setCurrentPage} currentState={currentState} setCurrentState={setCurrentState} />}
       {currentPage === 'QuizzOito' && <QuizzOito setCurrentPage={setCurrentPage} currentState={currentState} setCurrentState={setCurrentState} />}
       {currentPage === 'QuizzOnze' && <QuizzOnze setCurrentPage={setCurrentPage} currentState={currentState} setCurrentState={setCurrentState} />}
+      {currentPage === 'GameOito' && <GameOito setCurrentPage={setCurrentPage} currentState={currentState} setCurrentState={setCurrentState} />}
+
     </div>
   );
 }
