@@ -23,7 +23,7 @@ export default function Quizz({ setCurrentPage, currentState, setCurrentState })
                     </div>
                     <h1 className=" flex justify-center p-4 text-black text-lg font-bold">Pronto para o próximo desafio? Clique no botão abaixo !</h1>
                     <div className="flex justify-center p-10">
-                        <div className="flex justify-center">
+                        <div className="flex justify-center"> 
                             <button onClick={QuizzCinco} className="bg-customyellow font-bold py-10 px-10 rounded text-black text-2xl">Continuar</button>
                         </div>
                     </div>

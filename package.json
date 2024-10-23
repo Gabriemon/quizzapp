@@ -9,10 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "14.2.13",
+    "eslint-config-next": "^15.0.0",
+    "next": "^15.0.0",
     "quizzproject": "file:",
-    "react": "^18",
-    "react-dom": "^18"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "postcss": "^8",

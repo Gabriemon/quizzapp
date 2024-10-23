@@ -4,10 +4,10 @@ import React, { useState } from "react"
 
 export default function QuizzCinco({ setCurrentPage, currentState, setCurrentState }) {
 
-    const Game = () => {
+    const ResultCinco = () => {
         const newState = [...currentState,]
         setCurrentState(newState)
-        setCurrentPage('')
+        setCurrentPage('ResultCinco')
     }
 
     const Sair = () => {
@@ -18,7 +18,12 @@ export default function QuizzCinco({ setCurrentPage, currentState, setCurrentSta
         <>
             <div className="flex items-center justify-center h-screen">
                 <div className="size-4/6 bg-customgreen border border-gray-200 rounded-lg shadow dark:border-gray-700">
-                    
+                <div className="flex justify-center p-10">
+                 
+                    <div className="flex justify-center"> 
+                        <button onClick={ResultCinco} className="bg-customyellow font-bold py-10 px-10 rounded text-black text-2xl">Continuar</button>
+                    </div>
+                </div>
                 </div>
             </div>
             <div className="absolute bottom-4 right-4">

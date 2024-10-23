@@ -1,12 +1,12 @@
 "use client"
 import React, { useState } from 'react';
 
-export default function GameOito({ setCurrentPage, currentState, setCurrentState }) {
+export default function GameOnze({ setCurrentPage, currentState, setCurrentState }) {
 
-    const NextOito = () => {
+    const NextOnze = () => {
         const newState = [...currentState,]
         setCurrentState(newState)
-        setCurrentPage('NextOito')
+        setCurrentPage('NextOnze')
     }
 
     const Sair = () => {
@@ -19,7 +19,7 @@ export default function GameOito({ setCurrentPage, currentState, setCurrentState
           <div className="size-4/6 bg-customgreen border border-gray-200 rounded-lg shadow dark:border-gray-700">
           <div className="flex justify-center p-10">
              <div className="flex justify-center"> 
-                <button onClick={NextOito} className="bg-customyellow font-bold py-10 px-10 rounded text-black text-2xl">Continuar</button>
+                <button onClick={NextOnze} className="bg-customyellow font-bold py-10 px-10 rounded text-black text-2xl">Continuar</button>
               </div>
               </div>
               </div>
