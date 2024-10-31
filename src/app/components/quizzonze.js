@@ -16,13 +16,19 @@ export default function QuizzOnze({ setCurrentPage, currentState, setCurrentStat
 
     return (
         <>
-            <div className="flex items-center justify-center h-screen">
+             <div className="flex items-center justify-center h-screen">
                 <div className="size-4/6 bg-customgreen border border-gray-200 rounded-lg shadow dark:border-gray-700">
-                <div className="flex justify-center p-10">
-             <div className="flex justify-center"> 
-                <button onClick={GameOnze} className="bg-custompink font-bold py-10 px-10 rounded text-black text-2xl">Continuar</button>
-              </div>
-              </div>
+                    <div className="text-center text-black text-base md:text-lg lg:text-xl font-bold mt-4">
+                        <p>Olá, aventureiro da matemática! 🚀</p>
+                        <br />
+                        <p>Bem-vindo ao Quiz de Desafios Matemáticos para os Jovens Exploradores de 11 a 13 Anos! Você está prestes a entrar em uma jornada fascinante pelo mundo dos números e das formas! Aqui, encontrará perguntas desafiadoras que vão testar suas habilidades de raciocínio lógico, resolução de problemas e muito mais.</p>
+                        <br />
+                        <br />
+                        Prepare-se para desvendar enigmas, explorar conceitos matemáticos e se divertir enquanto aprende! Cada desafio é uma chance de brilhar e mostrar todo o seu talento. Vamos começar essa aventura incrível? 🚀
+                        <div className="flex justify-center mt-8">
+                            <button onClick={GameOnze} className="bg-custompink font-bold py-4 px-8 rounded text-black text-lg md:text-xl lg:text-2xl hover:bg-pink-400 transition duration-300">Vamos começar!</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="absolute bottom-4 right-4">

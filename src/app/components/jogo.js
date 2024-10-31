@@ -75,9 +75,9 @@ export default function Home({ setCurrentPage, currentState, setCurrentState }) 
         disabled={attempts >= 5} // Desabilitar input após 5 tentativas
       />
       <button
-        onClick={handleCheck}
-        className="bg-blue-500 text-white py-2 flex-col px-4 rounded"
-        disabled={attempts >= 5} // Desabilitar o botão após 5 tentativas
+  onClick={handleCheck}
+  className="bg-blue-500 text-white py-2 flex-col px-4 rounded"
+  disabled={attempts >= 5 || !userInput} // Desabilitar o botão se não houver entrada ou se as tentativas forem 5
       >
         Verificar
       </button>
