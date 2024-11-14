@@ -8,9 +8,9 @@ export default function Inicial({ setCurrentPage, currentState, setCurrentState 
     };
 
     const handleAgeClick = (ageGroup) => {
-        const newState = [...currentState, { name, ageGroup }]; // Adiciona o nome e a faixa etária ao estado atual
+        const newState = [...currentState, { name, ageGroup }]; 
         setCurrentState(newState);
-        setCurrentPage(ageGroup); // Define a página com base no grupo etário
+        setCurrentPage(ageGroup); 
     };
 
     return (

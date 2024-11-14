@@ -106,8 +106,9 @@ export default function GameOnze({ setCurrentPage, currentState, setCurrentState
 
   return (
     <>
-      <div className="flex items-center justify-center h-screen">
-        <div className="size-4/6 bg-customgreen border border-gray-200 rounded-lg shadow dark:border-gray-700 p-6 md:p-10">
+
+      <div className="flex items-center justify-center text-center h-screen bg-gray-100">
+        <div className="flex flex-col max-w-4xl bg-customgreen border rounded-lg  p-6 md:p-10 dark:border-gray-700">
           <h1 className="text-2xl font-bold mb-4 text-gray-700 text-center">
             Descubra o Próximo Número na Sequência!
           </h1>

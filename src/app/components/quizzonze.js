@@ -16,10 +16,10 @@ export default function QuizzOnze({ setCurrentPage, currentState, setCurrentStat
 
     return (
         <>
-             <div className="flex items-center justify-center h-screen">
-                <div className="size-4/6 bg-customgreen border border-gray-200 rounded-lg shadow dark:border-gray-700">
+            <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
+                <div className="w-full max-w-4xl bg-customgreen border border-gray-200 rounded-lg shadow-lg p-6">
                     <div className="text-center text-black text-base md:text-lg lg:text-xl font-bold mt-4">
-                        <p>Olá, aventureiro da matemática! 🚀</p>
+                        <p className="text-center text-black text-lg md:text-xl lg:text-2xl font-bold">Olá, aventureiro da matemática! 🚀</p>
                         <br />
                         <p>Bem-vindo ao Quiz de Desafios Matemáticos para os Jovens Exploradores de 11 a 13 Anos! Você está prestes a entrar em uma jornada fascinante pelo mundo dos números e das formas! Aqui, encontrará perguntas desafiadoras que vão testar suas habilidades de raciocínio lógico, resolução de problemas e muito mais.</p>
                         <br />

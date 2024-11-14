@@ -15,14 +15,17 @@ export default function NextOito({ setCurrentPage, currentState, setCurrentState
 
     return (
      <>
-      <div className="flex items-center justify-center h-screen">
-          <div className="size-4/6 bg-customgreen border border-gray-200 rounded-lg shadow dark:border-gray-700">
+       <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
+       <div className="w-full max-w-4xl bg-customgreen border border-gray-200 rounded-lg shadow-lg p-6">
           <div className='flex justify-center'>
-            <h1 className="text-center text-black text-base md:text-lg lg:text-xl font-bold mt-4">Olá, Jovem! 🎉 
+            <h1 className="text-center text-black text-lg md:text-xl lg:text-2xl font-bold">Olá, Jovem! 🎉 
+              <br/>
             Você se saiu muito bem nessa primeira etapa mas agora temos um novo desafio para você, neste novo desafio
             será haverá um incrível quizz para testart seus conhecimentos. Boa sorte !</h1>
-            
-            <p className="text-center text-black text-base md:text-lg lg:text-xl font-bold mt-4">O que você irá encontrar nesse novo desafio :</p>
+            </div>
+            <div>
+            <br/>
+            <p className="text-center text-black text-lg md:text-xl lg:text-2xl font-bold">O que você irá encontrar nesse novo desafio :</p>
 
           </div>
           <div className="flex justify-center p-10">

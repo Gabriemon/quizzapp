@@ -46,9 +46,56 @@ export default function GameOito({ setCurrentPage, currentState, setCurrentState
                 { text: '10 m', isCorrect: false },
             ],
         },
-        
-        // Adicione mais perguntas aqui
+        {
+            text: 'Quantos segundos há em 1 minuto?',
+            options: [
+                { text: '60 segundos', isCorrect: true },
+                { text: '100 segundos', isCorrect: false },
+                { text: '30 segundos', isCorrect: false },
+            ],
+        },
+        {
+            text: 'Quantos minutos há em 1 hora?',
+            options: [
+                { text: '60 minutos', isCorrect: true },
+                { text: '100 minutos', isCorrect: false },
+                { text: '30 minutos', isCorrect: false },
+            ],
+        },
+        {
+            text: 'Quantos dias há em uma semana?',
+            options: [
+                { text: '5 dias', isCorrect: false },
+                { text: '7 dias', isCorrect: true },
+                { text: '10 dias', isCorrect: false },
+            ],
+        },
+        {
+            text: 'Quantos meses há em 1 ano?',
+            options: [
+                { text: '10 meses', isCorrect: false },
+                { text: '12 meses', isCorrect: true },
+                { text: '8 meses', isCorrect: false },
+            ],
+        },
+        {
+            text: 'Quantos anos há em 1 século?',
+            options: [
+                { text: '100 anos', isCorrect: true },
+                { text: '50 anos', isCorrect: false },
+                { text: '10 anos', isCorrect: false },
+            ],
+        },
+        {
+            text: 'Quantas horas há em 1 dia?',
+            options: [
+                { text: '12 horas', isCorrect: false },
+                { text: '24 horas', isCorrect: true },
+                { text: '48 horas', isCorrect: false },
+            ],
+        },
     ];
+        
 
     const [position, setPosition] = useState(0);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
