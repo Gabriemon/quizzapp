@@ -59,14 +59,13 @@ export default function QuizzCinco({ setCurrentPage, currentState, setCurrentSta
                             <div className="text-xl text-black mb-6">
                                 Você acertou {score} de {questions.length} perguntas.
                             </div>
-                            <button onClick={ResultCinco} className="bg-custompink text-white font-bold py-2 px-4 rounded-lg text-lg hover:bg-custompink transition duration-300">                       
-                                Continuar
-                            </button>
+                            
                             
                         </div>
                     </div>
                 </div>
             ) : (
+                
                 <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
                     <div className="w-2/3 bg-customgreen border border-gray-200 rounded-lg shadow-lg p-6">
                         <div className="text-center text-2xl text-black font-bold mb-6">
@@ -90,8 +89,8 @@ export default function QuizzCinco({ setCurrentPage, currentState, setCurrentSta
                 </div>
             )}
             <div className="absolute bottom-4 right-4">
-                <button onClick={Sair} className="bg-custompink text-white font-bold py-2 px-4 rounded-lg text-lg hover:bg-custompink transition duration-300">
-                    Sair
+                <button onClick={ResultCinco} className="bg-custompink text-white font-bold py-2 px-4 rounded-lg text-lg hover:bg-custompink transition duration-300">
+                    Continuar
                 </button>
             </div>
         </>

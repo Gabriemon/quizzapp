@@ -2,47 +2,17 @@
 import React, { useState, useEffect } from "react";
 
 // Função para gerar diferentes tipos de sequência lógica
+// Função para gerar uma sequência simples
 const generateSequence = () => {
-  const type = Math.floor(Math.random() * 5);
-  const start = Math.floor(Math.random() * 10) + 1;
-  const step = Math.floor(Math.random() * 5) + 2;
-
-  switch (type) {
-    case 0:
-      return Array.from({ length: 4 }, (_, i) => start + i * step);
-    case 1:
-      return Array.from({ length: 4 }, (_, i) => start * Math.pow(step, i));
-    case 2:
-      return Array.from({ length: 4 }, (_, i) => (i % 2 === 0 ? start + i * step : start - i * step));
-    case 3:
-      return Array.from({ length: 4 }, (_, i) => start * Math.pow(2, i));
-    case 4:
-      const seq = [start, start + step];
-      while (seq.length < 4) seq.push(seq[seq.length - 1] + seq[seq.length - 2]);
-      return seq;
-    default:
-      return [];
-  }
+  const start = Math.floor(Math.random() * 10) + 1; // Número inicial
+  const step = Math.floor(Math.random() * 5) + 1; // Passo da sequência
+  return Array.from({ length: 4 }, (_, i) => start + i * step); // Sequência linear
 };
 
-// Função para calcular o próximo número da sequência
-const getNextInSequence = (sequence) => {
-  const difference = sequence[1] - sequence[0];
-  const ratio = sequence[1] / sequence[0];
+// Função para calcular o próximo número
+const getNextInSequence = (sequence) => sequence[sequence.length - 1] + (sequence[1] - sequence[0]);
 
-  if (difference === 0) return sequence[sequence.length - 1]; // Se todos os números forem iguais
-  if (sequence[1] - sequence[0] === difference) {
-    return sequence[sequence.length - 1] + difference; // Progressão aritmética
-  } else if (sequence[1] / sequence[0] === ratio) {
-    return sequence[sequence.length - 1] * ratio; // Progressão geométrica
-  } else if (sequence[0] * 2 === sequence[1]) {
-    return sequence[sequence.length - 1] * 2; // Múltiplos (x2)
-  } else {
-    return sequence[sequence.length - 1] + sequence[sequence.length - 2]; // Soma dos dois anteriores
-  }
-};
-
-export default function GameOnze({ setCurrentPage, currentState, setCurrentState }) {
+export default function SimpleGame({ setCurrentPage }) {
   const [sequence, setSequence] = useState([]);
   const [userInput, setUserInput] = useState("");
   const [result, setResult] = useState("");
@@ -50,52 +20,35 @@ export default function GameOnze({ setCurrentPage, currentState, setCurrentState
   const [correctAttempts, setCorrectAttempts] = useState(0); // Contador de acertos
   const [hasCompleted, setHasCompleted] = useState(false);
 
-  // Reinicia o jogo com nova sequência
-  const resetGame = () => {
-    const newSequence = generateSequence();
-    setSequence(newSequence);
-    setUserInput("");
-    setResult("");
-    setHasCompleted(false);
-  };
-
   useEffect(() => {
-    resetGame();
+    setSequence(generateSequence()); // Gera a primeira sequência ao montar o componente
   }, []);
 
   // Verifica a resposta do usuário
   const handleCheck = () => {
     const correctAnswer = getNextInSequence(sequence);
-    const newAttempts = attempts + 1;
-
-    // Marca como concluído na 5ª tentativa
-    if (newAttempts === 5) {
-      setHasCompleted(true);
-    } else {
-      setAttempts(newAttempts); // Incrementa as tentativas
-    }
+    setAttempts(attempts + 1);
 
     if (parseInt(userInput) === correctAnswer) {
+      setCorrectAttempts(correctAttempts + 1);
       setResult("Parabéns! Você acertou!");
-      setCorrectAttempts(correctAttempts + 1); // Incrementa o contador de acertos
     } else {
       setResult("Tente novamente!");
     }
 
-    // Gera um novo desafio após a resposta, se ainda não atingiu a última tentativa
-    if (newAttempts < 5) {
-      setTimeout(() => {
-        resetGame(); // Reseta o jogo para o próximo desafio
-      }, 1000); // Atraso de 1 segundo para a transição visual
+    // Finaliza o jogo após 5 tentativas
+    if (attempts + 1 === 5) {
+      setHasCompleted(true);
+    } else {
+      // Gera nova sequência para próxima tentativa
+      setSequence(generateSequence());
     }
 
-    setUserInput(""); // Limpa o campo de input após cada tentativa
+    setUserInput(""); // Limpa o campo de input após verificar
   };
 
   // Próxima página
   const NextOnze = () => {
-    const newState = [...currentState];
-    setCurrentState(newState);
     setCurrentPage("NextOnze");
   };
 

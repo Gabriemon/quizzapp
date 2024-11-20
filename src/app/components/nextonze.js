@@ -20,7 +20,7 @@ export default function NextOnze({ setCurrentPage, currentState, setCurrentState
           <div className="flex justify-center p-10">
             <div>
             <h1 className="text-center text-black text-base md:text-lg lg:text-xl font-bold mt-4">
-            E aí, Explorador! 🚀 
+            E aí, explorador! 🚀 <br/><br/>
     Você mandou muito bem até aqui, mas agora chegou a hora de encarar um novo desafio! 
     Neste quiz, vamos testar o que você sabe e talvez aprender coisas novas pelo caminho. 
     Pronto para mostrar do que é capaz? Boa sorte!

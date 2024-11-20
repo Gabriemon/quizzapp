@@ -15,6 +15,14 @@ export default function Inicial({ setCurrentPage, currentState, setCurrentState 
 
     return (
         <>
+        <div 
+                className="flex items-center justify-center h-screen p-4" 
+                style={{
+                    backgroundImage: "url('src\app\img\fundo.jpg')",
+                    backgroundSize: 'cover',
+            
+                }}
+            >
             <div className="flex items-center justify-center h-screen p-4">
                 <div className="w-full max-w-4xl bg-customgreen border border-gray-200 rounded-lg shadow-lg p-6 md:p-10 dark:border-gray-700">
                     <h1 className="flex justify-center p-6 text-black text-lg md:text-xl font-bold">Quem somos?</h1>
@@ -46,6 +54,7 @@ export default function Inicial({ setCurrentPage, currentState, setCurrentState 
                         </button>
                     </div>
                 </div>
+            </div>
             </div>
         </>
     );
