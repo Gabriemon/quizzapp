@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        fundo: "url('./src/app/img/FundoQuizz.jpeg')",
+        "fundo": "url(\src\app\img\fundo.jpg)",
       },
       colors: {
         background: "var(--background)",

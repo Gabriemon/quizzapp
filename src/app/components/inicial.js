@@ -18,9 +18,8 @@ export default function Inicial({ setCurrentPage, currentState, setCurrentState 
         <div 
                 className="flex items-center justify-center h-screen p-4" 
                 style={{
-                    backgroundImage: "url('src\app\img\fundo.jpg')",
+                    backgroundImage: "url[('src\app\img\fundo.jpg')]",
                     backgroundSize: 'cover',
-            
                 }}
             >
             <div className="flex items-center justify-center h-screen p-4">
@@ -29,16 +28,7 @@ export default function Inicial({ setCurrentPage, currentState, setCurrentState 
                     <p className="text-black text-base md:text-lg p-4 text-center">
                         Nós somos estudantes de Tecnologia da faculdade SENAI Felix Guisard, dedicados a tornar a matemática básica mais acessível a todos. Nosso objetivo é incluir e facilitar o aprendizado dessa disciplina, superando barreiras e promovendo um ambiente acolhedor para pessoas de diferentes perfis. Acreditamos que a matemática é uma ferramenta essencial e queremos garantir que todos tenham a oportunidade de compreendê-la e utilizá-la em seu dia a dia. Junte-se a nós nessa missão de transformação e inclusão!
                     </p>
-                    <h1 className="flex justify-center p-4 text-black text-lg md:text-xl font-bold">Qual o seu nome?</h1>
-                    <div className="flex justify-center pb-4">
-                        <input
-                            type="text"
-                            placeholder="Digite seu nome..."
-                            value={name}
-                            onChange={handleNameChange}
-                            className="w-full max-w-xs bg-white placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-500 hover:border-slate-300 shadow-lg shadow-gray-100 ring-4 ring-transparent focus:ring-slate-100"
-                        />
-                    </div>
+                    
                     <h1 className="flex justify-center p-4 text-black text-lg md:text-xl font-bold">Quantos anos você tem?</h1>
                     
                     {/* Ajuste responsivo nos botões */}
