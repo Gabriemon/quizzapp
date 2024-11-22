@@ -48,8 +48,10 @@ export default function QuizzCinco({ setCurrentPage, currentState, setCurrentSta
 
     return (
         <>
+
             {isQuizFinished ? (
-                <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4 relative">
+            <div className="bg-cover bg-fundo">
+                <div className="flex items-center justify-center min-h-screen p-4 relative">
                     <canvas id="my-canvas" className="absolute inset-0"></canvas>
                     <div className="flex items-center justify-center w-full max-w-4xl h-96 bg-customgreen border border-gray-200 rounded-lg shadow-lg p-6 text-center">
                         <div>
@@ -59,15 +61,14 @@ export default function QuizzCinco({ setCurrentPage, currentState, setCurrentSta
                             <div className="text-xl text-black mb-6">
                                 Você acertou {score} de {questions.length} perguntas.
                             </div>
-                            
-                            
+                        </div>
                         </div>
                     </div>
-                </div>
+            </div>
             ) : (
-                
-                <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
-                    <div className="w-2/3 bg-customgreen border border-gray-200 rounded-lg shadow-lg p-6">
+                <div className="bg-cover bg-fundo">
+                <div className="flex items-center justify-center min-h-screen p-4">
+                    <div className="w-2/3 bg-customgreen rounded-lg shadow-lg p-6">
                         <div className="text-center text-2xl text-black font-bold mb-6">
                             Pergunta {currentQuestion + 1}/{questions.length}
                         </div>
@@ -87,12 +88,13 @@ export default function QuizzCinco({ setCurrentPage, currentState, setCurrentSta
                         </div>
                     </div>
                 </div>
+                </div>
             )}
             <div className="absolute bottom-4 right-4">
                 <button onClick={ResultCinco} className="bg-custompink text-white font-bold py-2 px-4 rounded-lg text-lg hover:bg-custompink transition duration-300">
                     Continuar
                 </button>
-            </div>
+            </div>  
         </>
     );
 }

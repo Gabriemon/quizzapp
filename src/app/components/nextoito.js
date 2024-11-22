@@ -15,7 +15,8 @@ export default function NextOito({ setCurrentPage, currentState, setCurrentState
 
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
+    <div className="bg-cover bg-fundo">
+      <div className="flex items-center justify-center min-h-screen p-4">
         <div className="w-full max-w-4xl bg-customgreen border border-gray-200 rounded-lg shadow-lg p-6">
           <div className='flex justify-center text-center text-black text-base md:text-lg lg:text-xl font-bold mt-4'>
             <h1 className="text-center text-black text-lg md:text-xl lg:text-2xl font-bold">Olá, Jovem Matemático! 🎉
@@ -43,6 +44,7 @@ export default function NextOito({ setCurrentPage, currentState, setCurrentState
         <button onClick={Sair} className="bg-custompink text-white font-bold py-2 px-4 rounded-lg text-lg hover:bg-custompink transition duration-300">
           Sair
         </button>
+      </div>
       </div>
     </>
   )

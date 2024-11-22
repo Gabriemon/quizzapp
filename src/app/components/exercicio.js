@@ -15,7 +15,8 @@ export default function Inicial({ setCurrentPage, currentState, setCurrentState 
 
     return (
         <>
-            <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
+            <div className="bg-cover bg-fundo">
+            <div className="flex items-center justify-center min-h-screen p-4">
                 <div className="w-full max-w-4xl bg-customgreen border border-gray-200 rounded-lg shadow-lg p-6">
                     <h1 className="text-center text-black text-lg md:text-xl lg:text-2xl font-bold">
                         Olá {nome}, seja bem-vindo ao Quiz!
@@ -56,6 +57,7 @@ export default function Inicial({ setCurrentPage, currentState, setCurrentState 
                     Sair
                 </button>
             </div>
+        </div>
         </>
     );
 }

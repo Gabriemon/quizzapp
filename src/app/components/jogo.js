@@ -56,8 +56,8 @@ export default function Home({ setCurrentPage, currentState, setCurrentState }) 
   }, []);
 
   return (
-
-    <div className="flex items-center justify-center text-center h-screen bg-gray-100">
+    <div className="bg-cover bg-fundo">
+    <div className="flex items-center justify-center text-center h-screen">
     <div className="flex flex-col max-w-4xl bg-customgreen border border-gray-200 rounded-lg shadow-lg p-6 md:p-10 dark:border-gray-700">
       <h1 className="text-2xl font-bold mb-6 text-black">Jogo de Correspondência!</h1>
       <p className="mb-4 text-black">Quantas estrelas você está vendo?</p>
@@ -99,6 +99,6 @@ export default function Home({ setCurrentPage, currentState, setCurrentState }) 
       </button>
     </div>
     </div>
-    
+    </div>
   );
 }

@@ -15,8 +15,9 @@ export default function NextOnze({ setCurrentPage, currentState, setCurrentState
 
     return (
      <>
+     <div className="bg-cover bg-fundo">
       <div className="flex items-center justify-center h-screen">
-          <div className="size-4/6 bg-customgreen border border-gray-200 rounded-lg shadow dark:border-gray-700">
+          <div className="size-4/6 bg-customgreen rounded-lg shadow dark:border-gray-700">
           <div className="flex justify-center p-10">
             <div>
             <h1 className="text-center text-black text-base md:text-lg lg:text-xl font-bold mt-4">
@@ -41,6 +42,7 @@ export default function NextOnze({ setCurrentPage, currentState, setCurrentState
                 Sair
             </button>
             </div>
+          </div>
           </div>
       </>
     )

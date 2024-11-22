@@ -45,10 +45,10 @@ export default function QuizzCinco({ setCurrentPage, currentState, setCurrentSta
         }
     }, [isQuizFinished, score]);  // Removido questions.length da dependência
 
-    const ResultCinco = () => {
+    const ResultOito = () => {
         const newState = [...currentState, score];
         setCurrentState(newState);
-        setCurrentPage("ResultCinco");
+        setCurrentPage("ResultOito");
     };
 
     const Sair = () => {
@@ -58,9 +58,10 @@ export default function QuizzCinco({ setCurrentPage, currentState, setCurrentSta
     return (
         <>
             {isQuizFinished ? (
-                <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4 relative">
+                <div className="bg-cover bg-fundo">
+                <div className="flex items-center justify-center min-h-screen p-4 relative">
                     <canvas id="my-canvas" className="absolute inset-0"></canvas>
-                    <div className="flex items-center justify-center w-full max-w-4xl h-96 bg-customgreen border border-gray-200 rounded-lg shadow-lg p-6 text-center">
+                    <div className="flex items-center justify-center w-full max-w-4xl h-96 bg-customgreen rounded-lg shadow-lg p-6 text-center">
                         <div>
                             <div className="text-3xl font-bold text-black mb-4">
                                 {score === questions.length ? "Parabéns! Você acertou todas as perguntas! 🎉" : "Quiz finalizado!"}
@@ -71,10 +72,11 @@ export default function QuizzCinco({ setCurrentPage, currentState, setCurrentSta
                             
                         </div>
                     </div>
-                </div>
+                </div></div>
             ) : (
-                <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
-                    <div className="w-2/3 bg-customgreen border border-gray-200 rounded-lg shadow-lg p-6">
+                <div className="bg-cover bg-fundo">
+                <div className="flex items-center justify-center min-h-screen  p-4">
+                    <div className="w-2/3 bg-customgreen rounded-lg shadow-lg p-6">
                         <div className="text-center text-2xl text-black font-bold mb-6">
                             Pergunta {currentQuestion + 1}/{questions.length}
                         </div>
@@ -93,8 +95,9 @@ export default function QuizzCinco({ setCurrentPage, currentState, setCurrentSta
                             ))}
                         </div>
                     </div>
-                </div>
+                </div></div>
             )}
+    
             <div className="absolute bottom-4 right-4">
             <button
                     onClick={ResultOito}

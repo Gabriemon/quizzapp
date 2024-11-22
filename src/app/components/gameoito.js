@@ -115,7 +115,8 @@ export default function GameOito({ setCurrentPage, currentState, setCurrentState
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <div className="bg-cover bg-fundo">
+        <div className="flex items-center justify-center min-h-screen">
             <div className="size-4/6 bg-customgreen border border-gray-200 rounded-lg shadow dark:border-gray-700 p-6">
                 <div style={{ textAlign: 'center', padding: '20px' }}>
                     <h1 style={{ color: 'black' }}>Corrida de Medidas</h1>
@@ -149,6 +150,7 @@ export default function GameOito({ setCurrentPage, currentState, setCurrentState
                     </button>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

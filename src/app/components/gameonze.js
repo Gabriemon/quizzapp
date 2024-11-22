@@ -59,8 +59,8 @@ export default function SimpleGame({ setCurrentPage }) {
 
   return (
     <>
-
-      <div className="flex items-center justify-center text-center h-screen bg-gray-100">
+      <div className="bg-cover bg-fundo">
+      <div className="flex items-center justify-center text-center h-screen">
         <div className="flex flex-col max-w-4xl bg-customgreen border rounded-lg  p-6 md:p-10 dark:border-gray-700">
           <h1 className="text-2xl font-bold mb-4 text-gray-700 text-center">
             Descubra o Próximo Número na Sequência!
@@ -111,6 +111,7 @@ export default function SimpleGame({ setCurrentPage }) {
         >
           Sair
         </button>
+      </div>
       </div>
     </>
   );
