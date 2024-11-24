@@ -31,13 +31,13 @@ export default function Inicial({ setCurrentPage, currentState, setCurrentState 
                     
                     {/* Ajuste responsivo nos botões */}
                     <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8 p-4">
-                        <button onClick={() => handleAgeClick('Exercicio')} className="bg-customyellow font-bold py-4 px-6 rounded text-black text-lg md:text-2xl w-full md:w-auto">
+                        <button onClick={() => handleAgeClick('Exercicio')} className="bg-customyellow font-bold py-4 px-6 rounded text-black text-lg md:text-2xl w-full md:w-auto transition-all duration-300 hover:scale-110">
                             5 - 7
                         </button>
-                        <button onClick={() => handleAgeClick('QuizzOito')} className="bg-customsalmon font-bold py-4 px-6 rounded text-black text-lg md:text-2xl w-full md:w-auto">
+                        <button onClick={() => handleAgeClick('QuizzOito')} className="bg-customsalmon font-bold py-4 px-6 rounded text-black text-lg md:text-2xl w-full md:w-auto transition-all duration-300 hover:scale-110">
                             8 - 10
                         </button>
-                        <button onClick={() => handleAgeClick('QuizzOnze')} className="bg-custompink font-bold py-4 px-6 rounded text-black text-lg md:text-2xl w-full md:w-auto">
+                        <button onClick={() => handleAgeClick('QuizzOnze')} className="bg-custompink font-bold py-4 px-6 rounded text-black text-lg md:text-2xl w-full md:w-auto transition-all duration-300 hover:scale-110">
                             11 - 13
                         </button>
                     </div>

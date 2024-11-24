@@ -42,7 +42,7 @@ export default function Inicial({ setCurrentPage, currentState, setCurrentState 
                     <div className="flex justify-center mt-8">
                         <button
                             onClick={Game}
-                            className="bg-custompink font-bold py-4 px-8 rounded text-black text-lg md:text-xl lg:text-2xl hover:bg-pink-400 transition duration-300"
+                            className="bg-custompink font-bold py-4 px-8 rounded text-black text-lg md:text-xl lg:text-2xl transition-all duration-300 hover:scale-110"
                         >
                             Vamos começar!
                         </button>
