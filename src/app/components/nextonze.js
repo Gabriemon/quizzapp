@@ -34,7 +34,7 @@ export default function NextOnze({ setCurrentPage, currentState, setCurrentState
             </div>
               </div>
               <div className="flex justify-center">
-                <button onClick={SecondOnze} className="bg-custompink font-bold py-10 px-10 rounded text-black text-2xl">Continuar</button>
+                <button onClick={SecondOnze} className="bg-custompink font-bold py-10 px-10 rounded text-black text-2xl transition-all duration-300 hover:scale-110">Continuar</button>
               </div>
               </div>
           <div className="absolute bottom-4 right-4">

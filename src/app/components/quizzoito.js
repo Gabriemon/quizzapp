@@ -32,7 +32,7 @@ export default function QuizzOito({ setCurrentPage, currentState, setCurrentStat
                         <br />
                         Prepare-se para desvendar mistérios, resolver enigmas e se divertir muito enquanto aprende! Cada desafio é uma oportunidade de brilhar e mostrar todo o seu talento matemático. Vamos lá? A aventura começa agora! 🌟
                         <div className="flex justify-center mt-8">
-                            <button onClick={GameOito} className="bg-custompink font-bold py-4 px-8 rounded text-black text-lg md:text-xl lg:text-2xl hover:bg-pink-400 transition duration-300">Vamos começar!</button>
+                            <button onClick={GameOito} className="bg-custompink font-bold py-4 px-8 rounded text-black text-lg md:text-xl lg:text-2xl transition-all duration-300 hover:scale-110">Vamos começar!</button>
                         </div>
                     </div>
                 </div>

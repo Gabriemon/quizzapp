@@ -137,7 +137,7 @@ export default function GameOito({ setCurrentPage, currentState, setCurrentState
                     {isGameFinished ? (
                         <div className="flex justify-center p-10">
                             <div className="flex justify-center">
-                                <button onClick={NextOito} className="bg-customyellow font-bold py-2 px-4 rounded text-black text-2xl">
+                                <button onClick={NextOito} className="bg-customyellow font-bold py-2 px-4 rounded text-black text-2xl transition-all duration-300 hover:scale-110">
                                     Continuar
                                 </button>
                             </div>

@@ -35,7 +35,7 @@ export default function NextOito({ setCurrentPage, currentState, setCurrentState
           </div>
           <div className="flex justify-center p-10">
             <div className="flex justify-center">
-              <button onClick={SecondOito} className="bg-custompink font-bold py-10 px-10 rounded text-black text-2xl">Continuar</button>
+              <button onClick={SecondOito} className="bg-custompink font-bold py-10 px-10 rounded text-black text-2xl transition-all duration-300 hover:scale-110">Continuar</button>
             </div>
           </div>
         </div>

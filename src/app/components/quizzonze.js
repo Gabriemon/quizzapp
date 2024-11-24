@@ -27,7 +27,7 @@ export default function QuizzOnze({ setCurrentPage, currentState, setCurrentStat
                         <br />
                         Prepare-se para desvendar enigmas, explorar conceitos matemáticos e se divertir enquanto aprende! Cada desafio é uma chance de brilhar e mostrar todo o seu talento. Vamos começar essa aventura incrível? 🚀
                         <div className="flex justify-center mt-8">
-                            <button onClick={GameOnze} className="bg-custompink font-bold py-4 px-8 rounded text-black text-lg md:text-xl lg:text-2xl hover:bg-pink-400 transition duration-300">Vamos começar!</button>
+                            <button onClick={GameOnze} className="bg-custompink font-bold py-4 px-8 rounded text-black text-lg md:text-xl lg:text-2xl transition-all duration-300 hover:scale-110">Vamos começar!</button>
                         </div>
                     </div>
                 </div>

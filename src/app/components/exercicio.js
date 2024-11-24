@@ -17,27 +17,17 @@ export default function Inicial({ setCurrentPage, currentState, setCurrentState 
         <>
             <div className="bg-cover bg-fundo">
             <div className="flex items-center justify-center min-h-screen p-4">
-                <div className="w-full max-w-4xl bg-customgreen border border-gray-200 rounded-lg shadow-lg p-6">
+                <div className="w-full max-w-4xl bg-customgreen rounded-lg shadow-lg p-6">
                     <h1 className="text-center text-black text-lg md:text-xl lg:text-2xl font-bold">
-                        Olá {nome}, seja bem-vindo ao Quiz!
-                    </h1>
+                    Olá, aventureiro da matemática! 🚀
+                    </h1><br/>
 
-                    <p className="text-center text-black text-base md:text-lg lg:text-xl font-bold mt-4">
-                        Olá, pequeno explorador! 🎉 Você está prestes a embarcar em uma aventura incrível no mundo da matemática! 🎉
-                    </p>
-
-                    <p className="text-center text-black text-base md:text-lg lg:text-xl font-bold mt-4">
-                        O que você vai encontrar:
-                    </p>
-
-                    <ul className="list-inside list-disc pl-6 md:pl-10">
-                        <li className="text-black text-base md:text-lg lg:text-xl font-bold mt-2">
-                            Contagem Divertida: Prepare-se para contar objetos coloridos, como frutas ou brinquedos.
-                        </li>
-                        <li className="text-black text-base md:text-lg lg:text-xl font-bold mt-2">
-                            Problemas de Adição e Subtração: Resolva pequenas adições e subtrações de forma divertida!
-                        </li>
-                    </ul>
+                    <p className="text-center text-black text-base md:text-lg lg:text-xl font-bold">
+                    Você está prestes a embarcar em uma aventura incrível no mundo da matemática! Aqui você encontrará muita diversão e aprendizado.
+                    </p><br/>
+                    <p className="text-center text-black text-base md:text-lg lg:text-xl font-bold">
+                    Primeiro, teremos a Contagem Divertida, onde você vai contar objetos coloridos. Depois, enfrentaremos problemas de adição e subtração, resolvendo desafios simples de forma super divertida. Preparado para começar? 🚀
+                    </p><br/>   
 
                     <div className="flex justify-center mt-8">
                         <button

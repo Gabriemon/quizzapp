@@ -96,7 +96,7 @@ export default function SimpleGame({ setCurrentPage }) {
               <p className="text-lg text-gray-700">Você acertou {correctAttempts} de 5 tentativas!</p>
               <button
                 onClick={NextOnze}
-                className="mt-4 bg-customyellow font-bold py-2 px-10 rounded text-black text-lg"
+                className="mt-4 bg-customyellow font-bold py-2 px-10 rounded text-black text-lg transition-all duration-300 hover:scale-110"
               >
                 Continuar
               </button>
